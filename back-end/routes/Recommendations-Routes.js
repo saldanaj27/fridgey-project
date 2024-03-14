@@ -1,9 +1,9 @@
 const { Router } = require("express");
-const recsRoute = require("../front-end/src/data/mock_recipes.json");
-const apiRoute = require("../front-end/src/data/spoonacular_recipes.json");
-const RecipeItem = require('./database/recipeItem');
-const SavedRecipe = require('./database/savedRecipe');
-const FridgeItem = require("./database/fridgeItem");
+const recsRoute = require("../../front-end/src/data/mock_recipes.json");
+const apiRoute = require("../../front-end/src/data/spoonacular_recipes.json");
+const RecipeItem = require('../database/recipeItem');
+const SavedRecipe = require('../database/savedRecipe');
+const FridgeItem = require("../database/fridgeItem");
 const axios = require("axios");
 
 var pantryItems = ["Water" ,"Ice" ,"Flour" ,"Sugar","Cane Sugar" ,"Cooking Fat" ,"Cooking Oil" ,"Vegetable Oil" ,"Black Pepper" ,"Salt"];

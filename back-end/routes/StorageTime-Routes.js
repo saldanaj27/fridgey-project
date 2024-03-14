@@ -1,6 +1,6 @@
 const { Router } = require("express");
 const router = new Router();
-const StorageItem = require("./database/storageItem");
+const StorageItem = require("../database/storageItem");
 
 router.get("/", (req, res) => {
   StorageItem.find().then((result) => {

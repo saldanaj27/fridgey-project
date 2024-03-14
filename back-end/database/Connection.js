@@ -1,8 +1,8 @@
 const mongoose = require("mongoose");
 
 const key=process.env.DATABASE_KEY
-// const URI =
-//   "mongodb+srv://master-user:wTMW1F3Vh2GE9i2q@cluster0.fsr0o.mongodb.net/fridgey?retryWrites=true&w=majority";
+// Ex: "mongodb+srv://<user>:<pass>@cluster0.fsr0o.mongodb.net/<datavase>?retryWrites=true&w=majority";
+
 const connectDB = async () => {
   await mongoose.connect(key, {
     useNewUrlParser: true,
@@ -13,14 +13,3 @@ const connectDB = async () => {
 };
 
 module.exports = connectDB;
-
-//   .connect(
-//     "mongodb+srv://master-user:wTMW1F3Vh2GE9i2q@cluster0.fsr0o.mongodb.net/myFirstDatabase?retryWrites=true&w=majority"
-//   )
-//   .then(() => {
-//     console.log("Successfully connected to MongoDB Atlas!");
-//   })
-//   .catch((error) => {
-//     console.log("Unable to connect to MongoDB Atlas!");
-//     console.error(error);
-//   });

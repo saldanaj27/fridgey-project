@@ -1,6 +1,6 @@
 const { Router } = require("express");
-const FridgeItem = require("./database/fridgeItem");
-const ShopItem = require("./database/shopItem");
+const FridgeItem = require("../database/fridgeItem");
+const ShopItem = require("../database/shopItem");
 const { body, validationResult } = require("express-validator");
 const router = new Router();
 

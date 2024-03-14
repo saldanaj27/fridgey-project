@@ -1,6 +1,6 @@
 const { Router } = require("express");
-const FridgeItem = require("./database/fridgeItem");
-const ShopItem = require("./database/shopItem");
+const FridgeItem = require("../database/fridgeItem");
+const ShopItem = require("../database/shopItem");
 const { body } = require("express-validator");
 const router = new Router();
 
@@ -55,8 +55,7 @@ router.post("/editItem", (req, res) => {
 });
 
 // Adds a Specific Fridge Item to Shopping List
-router.post(
-  "/addItem",
+router.post("/addItem",
   body("title").isLength({ min: 2 }),
   body("amount").isLength({ min: 2 }),
   body("type").isFloat({ min: 0, max: 3 }),
